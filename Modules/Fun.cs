@@ -13,5 +13,51 @@ using Newtonsoft.Json.Linq;
 
 namespace ZeBot.Modules
 {
+    public class EightBall : ModuleBase<SocketCommandContext>
+    {
+        string[] predictionsTexts = new string[]
+        {
+            "Without a doubt :ok_hand:",
+            "Outlook good :upside_down:",
+            "As I see it, yes :eyes:",
+            "Most likely :smirk:",
+            "Yes definitely :smile:",
+            "It is certain :smiley:",
+            "Outlook not so good :sob:",
+            "Cannot predict now :weary:",
+            "Very doubtful :unamused:",
+            "My sources say no :head_bandage:",
+            "Yes :thumbsup:",
+            "Reply hazy try again :disappointed_relieved:",
+            "Better not tell you now :speak_no_evil:",
+            "Signs point to yes :sunglasses:",
+            "Don't count on it :x:",
+            "You may rely on it :blush:",
+            "Ask again later :arrows_counterclockwise:",
+            "My reply is no :angry:",
+            "It is decidedly so :grin:",
+            "Concentrate and ask again :slight_frown:",
+        };
 
+        Random rand = new Random();
+
+        [Command("8ball")]
+        [Alias("eightball")]
+        [Summary("Gives a prediction")]
+        public async Task EightBallReply([Remainder] string input = null)
+        {
+            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!8ball {input}");
+
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                await ReplyAsync("Ask something for me to answer!! :grimacing:");
+            }
+            else
+            {
+                int randomIndex = rand.Next(predictionsTexts.Length);
+                string text = predictionsTexts[randomIndex];
+                await ReplyAsync(Context.User.Mention + ", " + text);
+            }
+        }
+    }
 }
