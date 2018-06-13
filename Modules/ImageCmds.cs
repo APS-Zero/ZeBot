@@ -13,13 +13,12 @@ using Newtonsoft.Json.Linq;
 
 namespace ZeBot.Modules
 {
-<<<<<<< HEAD
+
  if (3 >= Text.Length)
             {
                 await Context.Channel.SendMessageAsync("**Whoops**, sorry but I can't work with only 3 letters");
                 return;
             }
-            await Context.Channel.SendMessageAsync("**Notice**: This bot was made using a bot called BotMaker check the command : `links`");
 			await Context.Channel.SendMessageAsync("**Please** wait while I create an image for you....");
 
             WebClient web = new WebClient();
@@ -74,7 +73,6 @@ namespace ZeBot.Modules
                 await Context.Channel.SendFileAsync(@".\output.png");
 				
 			}
-=======
     public class Dog : ModuleBase<SocketCommandContext>
     {
         [Command("dog")]
@@ -111,5 +109,5 @@ namespace ZeBot.Modules
             client.Dispose();
         }
     }
->>>>>>> 4ef2e18d31162aee6986ee27cf1ec96f4f0d05fe
+
 }
