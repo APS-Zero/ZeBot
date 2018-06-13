@@ -11,7 +11,7 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Newtonsoft.Json.Linq;
 
-namespace ZeBot.Modules.Fun
+namespace ZeBot.Modules
 {
 
 }
