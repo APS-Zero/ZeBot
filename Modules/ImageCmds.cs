@@ -7,22 +7,21 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Discord;
-using SkiaSharp;
 using Discord.Commands;
 using Discord.WebSocket;
 using Newtonsoft.Json.Linq;
+using SkiaSharp;
 
 namespace ZeBot.Modules {
 
     public class Meme : ModuleBase<SocketCommandContext> {
         [Command ("meme")]
         public async Task Tett (string url, [Remainder] string Text) {
-
+            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did {Context.Message.Content}");
             if (3 >= Text.Length) {
                 await Context.Channel.SendMessageAsync ("**Whoops**, sorry but I can't work with only 3 letters");
                 return;
             }
-            await Context.Channel.SendMessageAsync ("**Notice**: This bot was made using a bot called BotMaker check the command : `links`");
             await Context.Channel.SendMessageAsync ("**Please** wait while I create an image for you....");
 
             WebClient web = new WebClient ();
@@ -34,7 +33,6 @@ namespace ZeBot.Modules {
             using (var surface = SKSurface.Create (info)) {
                 var canvas = surface.Canvas;
                 var font = SKTypeface.FromFamilyName ("Impact");
-                
 
                 var paint = new SKPaint {
                     Color = SKColors.White,
@@ -78,7 +76,7 @@ namespace ZeBot.Modules {
         [Command ("dog")]
         [Alias ("rdog", "randdog")]
         public async Task RandomDog () {
-            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!dog");
+            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did {Context.Message.Content}");
 
             WebClient client = new WebClient ();
             string info = client.DownloadString ("https://dog.ceo/api/breeds/image/random");
@@ -97,7 +95,7 @@ namespace ZeBot.Modules {
         [Command ("cat")]
         [Alias ("rcat", "randcat")]
         public async Task RandomCat () {
-            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!cat");
+            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did {Context.Message.Content}");
 
             WebClient client = new WebClient ();
             string info = client.DownloadString ("http://theoldreader.com/kittens/600/400/js");
