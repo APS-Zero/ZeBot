@@ -13,6 +13,7 @@ using Discord.WebSocket;
 using Newtonsoft.Json.Linq;
 
 namespace ZeBot.Modules {
+
     public class Meme : ModuleBase<SocketCommandContext> {
         [Command ("meme")]
         public async Task Tett (string url, [Remainder] string Text) {
@@ -72,6 +73,7 @@ namespace ZeBot.Modules {
             }
         }
     }
+
     public class Dog : ModuleBase<SocketCommandContext> {
         [Command ("dog")]
         [Alias ("rdog", "randdog")]
@@ -104,5 +106,4 @@ namespace ZeBot.Modules {
             client.Dispose ();
         }
     }
-
 }
