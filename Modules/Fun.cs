@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,6 +58,42 @@ namespace ZeBot.Modules
                 string text = predictionsTexts[randomIndex];
                 await ReplyAsync(Context.User.Mention + ", " + text);
             }
+        }
+    }
+
+    [Group("diceroll")]
+    [Alias("dice", "d")]
+    public class DiceRolling : ModuleBase<SocketCommandContext>
+    {
+        string[] predictRoll = new string[]
+        {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+        };
+
+        Random rand = new Random();
+
+        [Command]
+        public async Task DrReply()
+        {
+            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!diceroll");
+
+            var Dice = new Emoji("🎲");
+
+            await Context.Message.AddReactionAsync(Dice);
+
+            int randomIndex = rand.Next(predictRoll.Length);
+            string drText = predictRoll[randomIndex];
+            await ReplyAsync(Context.User.Mention + "\nYou rolled a **" + drText + "**! :game_die:");
+
+            /*if (Context.Message.GetReactionUsersAsync(Dice))
+            {
+                await ReplyAsync(Context.User.Mention + "\nYou rolled a **" + drText + "**! :game_die:");
+            }*/
         }
     }
 }
