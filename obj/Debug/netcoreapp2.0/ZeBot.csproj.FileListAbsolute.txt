@@ -1,0 +1,10 @@
+C:\Users\Epiphan\Documents\GitHub\ZeBot\bin\Debug\netcoreapp2.0\ZeBot.deps.json
+C:\Users\Epiphan\Documents\GitHub\ZeBot\bin\Debug\netcoreapp2.0\ZeBot.runtimeconfig.json
+C:\Users\Epiphan\Documents\GitHub\ZeBot\bin\Debug\netcoreapp2.0\ZeBot.runtimeconfig.dev.json
+C:\Users\Epiphan\Documents\GitHub\ZeBot\bin\Debug\netcoreapp2.0\ZeBot.dll
+C:\Users\Epiphan\Documents\GitHub\ZeBot\bin\Debug\netcoreapp2.0\ZeBot.pdb
+C:\Users\Epiphan\Documents\GitHub\ZeBot\obj\Debug\netcoreapp2.0\ZeBot.csproj.CoreCompileInputs.cache
+C:\Users\Epiphan\Documents\GitHub\ZeBot\obj\Debug\netcoreapp2.0\ZeBot.AssemblyInfoInputs.cache
+C:\Users\Epiphan\Documents\GitHub\ZeBot\obj\Debug\netcoreapp2.0\ZeBot.AssemblyInfo.cs
+C:\Users\Epiphan\Documents\GitHub\ZeBot\obj\Debug\netcoreapp2.0\ZeBot.dll
+C:\Users\Epiphan\Documents\GitHub\ZeBot\obj\Debug\netcoreapp2.0\ZeBot.pdb
