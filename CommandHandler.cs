@@ -40,7 +40,7 @@ namespace ZeBot
 
             int argPos = 0;
 
-            if (msg.HasCharPrefix('-', ref argPos))
+            if (msg.HasStringPrefix("z!", ref argPos))
             {
                 var result = await _service.ExecuteAsync(Context, argPos);
 
