@@ -14,7 +14,7 @@ namespace ZeBot {
 
             _client = new DiscordSocketClient ();
 
-            await _client.LoginAsync (TokenType.Bot, "");
+            await _client.LoginAsync (TokenType.Bot, "NDU1NzU0NzI5OTM5Nzk1OTc5.DgLYSQ.9WNe6-6x1u3iX_f6f63jkwDz2QE");
 
             await _client.StartAsync ();
             _client.Ready += async () => {
