@@ -7,6 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="discord.net" Version="1.0.2" />
+    <PackageReference Include="Naudio" Version="1.8.4" />
+    <PackageReference Include="Ncalc" Version="1.3.8" />
+    <PackageReference Include="SkiaSharp" Version="1.60.1" />
   </ItemGroup>
 
 </Project>
