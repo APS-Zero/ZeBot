@@ -25,7 +25,7 @@ namespace ZeBot
         {
            
             int count =_client.Guilds.Count;
-            await _client.SetGameAsync($"+help");
+            await _client.SetGameAsync($"z!help");
 
         }
 
