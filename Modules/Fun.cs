@@ -46,7 +46,7 @@ namespace ZeBot.Modules
         [Summary("Gives a prediction")]
         public async Task EightBallReply([Remainder] string input = null)
         {
-            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!8ball {input}");
+            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did z!8ball {input}");
 
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -80,7 +80,7 @@ namespace ZeBot.Modules
         [Command]
         public async Task DrReply()
         {
-            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!diceroll");
+            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did z!diceroll");
 
             var Dice = new Emoji("🎲");
 

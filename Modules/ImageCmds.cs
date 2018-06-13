@@ -18,6 +18,8 @@ namespace ZeBot.Modules {
         [Command ("meme")]
         public async Task Tett (string url, [Remainder] string Text) {
 
+            Console.WriteLine($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did z!meme {url} {Text}");
+
             if (3 >= Text.Length) {
                 await Context.Channel.SendMessageAsync ("**Whoops**, sorry but I can't work with only 3 letters");
                 return;
@@ -78,7 +80,7 @@ namespace ZeBot.Modules {
         [Command ("dog")]
         [Alias ("rdog", "randdog")]
         public async Task RandomDog () {
-            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!dog");
+            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did z!dog");
 
             WebClient client = new WebClient ();
             string info = client.DownloadString ("https://dog.ceo/api/breeds/image/random");
@@ -97,7 +99,7 @@ namespace ZeBot.Modules {
         [Command ("cat")]
         [Alias ("rcat", "randcat")]
         public async Task RandomCat () {
-            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did a!cat");
+            Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did z!cat");
 
             WebClient client = new WebClient ();
             string info = client.DownloadString ("http://theoldreader.com/kittens/600/400/js");
