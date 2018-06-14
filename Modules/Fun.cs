@@ -38,12 +38,12 @@ namespace ZeBot.Modules {
 
         Random rand = new Random ();
 
+
         [Command ("8ball")]
         [Alias ("eightball")]
         [Summary ("Gives a prediction")]
         public async Task EightBallReply ([Remainder] string input = null) {
             Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did {Context.Message.Content}");
-
             if (string.IsNullOrWhiteSpace (input)) {
                 await ReplyAsync ("Ask something for me to answer!! :grimacing:");
             } else {
@@ -90,7 +90,6 @@ namespace ZeBot.Modules {
         [Command]
         public async Task DrReply () {
             Console.WriteLine ($"{DateTime.Now}: {Context.User.Username + "#" + Context.User.Discriminator} in {Context.Guild.Name} did {Context.Message.Content}");
-
             var Dice = new Emoji ("🎲");
 
             await Context.Message.AddReactionAsync (Dice);
