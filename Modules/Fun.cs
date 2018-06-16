@@ -52,7 +52,9 @@ namespace ZeBot.Modules {
                 await ReplyAsync (Context.User.Mention + ", " + text);
             }
         }
-        public class KillMe : ModuleBase<SocketCommandContext> {
+    }
+
+    public class KillMe : ModuleBase<SocketCommandContext> {
             [Command ("kill me")]
             [Summary ("kills you :3")]
             public async Task KILL () {
@@ -68,10 +70,8 @@ namespace ZeBot.Modules {
                 await msg.ModifyAsync (X => X.Content = ":dizzy_face:");
                 await Task.Delay (1500);
                 await msg.ModifyAsync (X => X.Content = ":skull:");
-
             }
         }
-    }
 
     [Group ("diceroll")]
     [Alias ("dice", "d")]
